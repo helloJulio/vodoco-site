@@ -1,0 +1,28 @@
+async function loadSite(){
+  try{
+    const res = await fetch('/content/site.json').catch(()=>fetch('content/site.json'));
+    const data = await res.json();
+    // Brand
+    document.querySelectorAll('[data-business]').forEach(el=>el.textContent=data.businessName);
+    document.querySelectorAll('[data-tagline]').forEach(el=>el.textContent=data.tagline);
+    // Contact
+    const phone = data.phone.replace(/\s+/g,'');
+    document.querySelectorAll('[data-phone]').forEach(el=>el.textContent=data.phone);
+    document.querySelectorAll('[data-phone-link]').forEach(el=>el.setAttribute('href','tel:'+phone));
+    document.querySelectorAll('[data-email]').forEach(el=>el.textContent=data.email);
+    document.querySelectorAll('[data-email-link]').forEach(el=>el.setAttribute('href','mailto:'+data.email));
+    document.querySelectorAll('[data-website]').forEach(el=>el.textContent=data.website);
+    document.querySelectorAll('[data-website-link]').forEach(el=>el.setAttribute('href',data.website));
+    if (data.colors){
+      document.documentElement.style.setProperty('--primary', data.colors.primary||'#0A6EBD');
+      document.documentElement.style.setProperty('--accent', data.colors.accent||'#16a34a');
+    }
+    if (data.services){
+      const list = document.querySelector('#services-list');
+      if(list){
+        list.innerHTML = data.services.map(s=>`<div class="card"><span class="tag">Service</span><h3>${s}</h3></div>`).join('');
+      }
+    }
+  }catch(e){ console.warn('site.json not loaded', e); }
+}
+document.addEventListener('DOMContentLoaded', loadSite);
