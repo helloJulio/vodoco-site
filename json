@@ -1,0 +1,22 @@
+{
+  "businessName": "Vodoco Services \u2013 Professional Cleaning",
+  "tagline": "Spotless results. Reliable service.",
+  "phone": "+61 413 387 095",
+  "email": "hello.vodoco@outlook.com",
+  "website": "https://vodocoservices.com.au",
+  "address": "14 Nyan St, Chifley NSW 2036",
+  "abn": "ABN: 31 595 981 360",
+  "colors": {
+    "primary": "#0A6EBD",
+    "accent": "#16a34a",
+    "dark": "#0b1727"
+  },
+  "services": [
+    "Domestic Cleaning",
+    "Office Cleaning",
+    "Strata Cleaning",
+    "High-Pressure Cleaning",
+    "Carpet Steam Cleaning",
+    "End of Tenancy Cleaning"
+  ]
+}
