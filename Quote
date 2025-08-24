@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vodoco Services – Professional Cleaning</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script defer src="assets/js/site.js"></script>
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <h1 data-business>Vodoco Services – Professional Cleaning</h1>
+      </div>
+      <nav class="nav">
+        <a href="./">Home</a>
+        <a href="services/">Services</a>
+        <a href="gallery/">Gallery</a>
+        <a href="contact/">Contact</a>
+        <a href="quote/">Get a Quote</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div>
+        <span class="badge">100% Satisfaction Guarantee</span>
+        <h2>Professional cleaning you can trust</h2>
+        <p class="lead" data-tagline>Spotless results. Reliable service.</p>
+        <div class="buttons">
+          <a class="btn btn-primary" href="quote/">🚀 Get a Free Quote</a>
+          <a class="btn btn-outline" href="Julio_Cesar_G_Lopez.vcf" download="Julio_Cesar_G_Lopez.vcf">📇 Save Contact (vCard)</a>
+          <a class="btn btn-outline" data-phone-link href="#">📞 <span data-phone>+61 413 387 095</span></a>
+        </div>
+        <div style="margin-top:14px;">
+          <a class="small" data-email-link href="#">✉ <span data-email>hello.vodoco@outlook.com</span></a> ·
+          <a class="small" data-website-link href="#" target="_blank" rel="noopener"><span data-website>vodocoservices.com.au</span></a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="grid">
+          <div>
+            <span class="tag">Trusted</span>
+            <h3>Police-checked & insured</h3>
+            <p class="lead">We treat your place with care and respect.</p>
+          </div>
+          <div>
+            <span class="tag">Transparent</span>
+            <h3>Upfront pricing</h3>
+            <p class="lead">Clear quotes, no surprises, GST included.</p>
+          </div>
+          <div>
+            <span class="tag">Flexible</span>
+            <h3>Residential & Commercial</h3>
+            <p class="lead">From strata to offices, we’ve got you covered.</p>
+          </div>
+        </div>
+        <hr>
+        <div style="display:flex;gap:16px;align-items:center;flex-wrap:wrap;">
+          <img class="qr" src="assets/qr/vodoco_vcf_qr_colored.png" alt="QR vCard (save contact)" onerror="this.onerror=null;this.src='assets/qr/vodoco_vcf_qr_bw.png'">
+          <div>
+            <strong>Scan to save my contact</strong><br>
+            or download the <a class="small" href="Julio_Cesar_G_Lopez.vcf" download>vCard file</a>.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Popular services</h2>
+      <div id="services-list" class="grid"></div>
+    </section>
+
+    <footer class="footer">
+      <div data-business>Vodoco Services – Professional Cleaning</div>
+      <div><span data-website>vodocoservices.com.au</span> · <span data-phone>+61 413 387 095</span> · <span data-email>hello.vodoco@outlook.com</span></div>
+      <div>© <span id="year"></span> All rights reserved.</div>
+      <script>document.getElementById('year').textContent=new Date().getFullYear()</script>
+    
+    <section>
+      <h2>Reviews</h2>
+      <div class="grid">
+        <div class="card"><span class="tag">★★★★★</span><h3>Leah R.</h3><p class="lead">“Amazing end-of-lease clean. Full bond back!”</p></div>
+        <div class="card"><span class="tag">★★★★★</span><h3>Julia L.</h3><p class="lead">“Reliable and spotless. Highly recommended.”</p></div>
+        <div class="card"><span class="tag">★★★★★</span><h3>Dr. Louis K.</h3><p class="lead">“Professional and thorough. Will book again.”</p></div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div data-business>Vodoco Services – Professional Cleaning</div>
+      <div><span data-website>vodocoservices.com.au</span> · <span data-phone>+61 413 387 095</span> · <span data-email>hello.vodoco@outlook.com</span></div>
+      <div>© <span id="year"></span> All rights reserved.</div>
+      <script>document.getElementById('year').textContent=new Date().getFullYear()</script>
+    </footer>
+  </div>
+</body>
+</html>
