@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Free Quote – Vodoco Services</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script defer src="../assets/js/site.js"></script>
+  <script>
+    function sendQuote(e){
+      e.preventDefault();
+      const get = id => document.getElementById(id).value.trim();
+      const name = get('q_name');
+      const phone = get('q_phone');
+      const email = get('q_email');
+      const service = get('q_service');
+      const bedrooms = get('q_bedrooms');
+      const bathrooms = get('q_bathrooms');
+      const address = get('q_address');
+      const date = get('q_date');
+      const notes = get('q_notes');
+
+      // Build message
+      const subject = encodeURIComponent('Free Quote Request – ' + name);
+      const body = encodeURIComponent(
+        'Hi Vodoco,%0A%0A' +
+        'Name: ' + name + '%0A' +
+        'Phone: ' + phone + '%0A' +
+        'Email: ' + email + '%0A' +
+        'Service: ' + service + '%0A' +
+        'Bedrooms: ' + bedrooms + '%0A' +
+        'Bathrooms: ' + bathrooms + '%0A' +
+        'Address: ' + address + '%0A' +
+        'Preferred date: ' + date + '%0A' +
+        'Notes: ' + notes + '%0A%0A' +
+        'Thanks!'
+      );
+
+      // Email link
+      const mailto = 'mailto:hello.vodoco@outlook.com?subject=' + subject + '&body=' + body;
+
+      // WhatsApp link
+      const wa = 'https://wa.me/61413387095?text=' + body;
+
+      // Open both options in new tabs
+      window.open(mailto, '_blank');
+      window.open(wa, '_blank');
+    }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="brand"><div class="logo"></div><h1 data-business>Vodoco Services – Professional Cleaning</h1></div>
+      <nav class="nav">
+        <a href="../">Home</a><a href="../services/">Services</a><a href="../gallery/">Gallery</a><a href="../contact/">Contact</a>
+      </nav>
+    </header>
+
+    <section class="card">
+      <span class="badge">Free Quote</span>
+      <h2>Request your free quote</h2>
+      <p class="lead">Fill this quick form and we'll get back to you shortly.</p>
+
+      <form onsubmit="sendQuote(event)" style="display:grid;grid-template-columns:repeat(2,1fr);gap:12px;">
+        <div>
+          <label for="q_name">Full name</label><br>
+          <input id="q_name" required style="width:100%;padding:10px;border-radius:8px;border:1px solid #e5e7eb">
+        </div>
+        <div>
+          <label for="q_phone">Phone</label><br>
+          <input id="q_phone" required style="width:100%;padding:10px;border-radius:8px;border:1px solid #e5e7eb">
+        </div>
+        <div>
+          <label for="q_email">Email</label><br>
+          <input id="q_email" type="email" required style="width:100%;padding:10px;border-radius:8px;border:1px solid #e5e7eb">
+        </div>
+        <div>
+          <label for="q_service">Service</label><br>
+          <select id="q_service" style="width:100%;padding:10px;border-radius:8px;border:1px solid #e5e7eb">
+            <option>Domestic Cleaning</option>
+            <option>Office Cleaning</option>
+            <option>Strata Cleaning</option>
+            <option>High-Pressure Cleaning</option>
+            <option>Carpet Steam Cleaning</option>
+            <option>End of Tenancy Cleaning</option>
+          </select>
+        </div>
+        <div>
+          <label for="q_bedrooms">Bedrooms</label><br>
+          <input id="q_bedrooms" type="number" min="0" value="2" style="width:100%;padding:10px;border-radius:8px;border:1px solid #e5e7eb">
+        </div>
+        <div>
+          <label for="q_bathrooms">Bathrooms</label><br>
+          <input id="q_bathrooms" type="number" min="0" value="1" style="width:100%;padding:10px;border-radius:8px;border:1px solid #e5e7eb">
+        </div>
+        <div style="grid-column:1/3">
+          <label for="q_address">Address</label><br>
+          <input id="q_address" style="width:100%;padding:10px;border-radius:8px;border:1px solid #e5e7eb">
+        </div>
+        <div>
+          <label for="q_date">Preferred date</label><br>
+          <input id="q_date" type="date" style="width:100%;padding:10px;border-radius:8px;border:1px solid #e5e7eb">
+        </div>
+        <div style="grid-column:1/3">
+          <label for="q_notes">Notes</label><br>
+          <textarea id="q_notes" rows="4" style="width:100%;padding:10px;border-radius:8px;border:1px solid #e5e7eb"></textarea>
+        </div>
+        <div style="grid-column:1/3;display:flex;gap:10px;flex-wrap:wrap;margin-top:10px">
+          <button class="btn btn-primary" type="submit">🚀 Send via Email & WhatsApp</button>
+          <a class="btn btn-outline" href="mailto:hello.vodoco@outlook.com?subject=Free%20Quote%20Request" onclick="event.preventDefault();document.querySelector('form').dispatchEvent(new Event('submit', {cancelable:true, bubbles:true}));">✉ Email only</a>
+          <a class="btn btn-outline" href="#" onclick="event.preventDefault();document.querySelector('form').dispatchEvent(new Event('submit', {cancelable:true, bubbles:true}));">💬 WhatsApp only</a>
+        </div>
+      </form>
+    </section>
+  </div>
+</body>
+</html>
